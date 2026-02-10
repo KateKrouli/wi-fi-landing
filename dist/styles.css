@@ -159,8 +159,8 @@ p {
 
 .main-width {
   width: 100%;
-  max-width: 1300px;
-  padding: 0 10px;
+  max-width: 1320px;
+  padding: 0 20px;
   margin: 0 auto;
 }
 
@@ -484,6 +484,14 @@ header .header__label {
   font-weight: 500;
   line-height: 20px;
 }
+@media (max-width: 767px) {
+  header .header__label {
+    padding: 8px;
+  }
+  header .header__label span {
+    display: none;
+  }
+}
 header .header .lang-switcher {
   margin-left: auto;
   flex-direction: row;
@@ -496,6 +504,13 @@ header .header .lang-switcher {
   padding: 80px 0;
   position: relative;
 }
+@media (max-width: 767px) {
+  .banner {
+    padding: 20px 0;
+    height: auto;
+    background-position: left;
+  }
+}
 .banner__content {
   display: flex;
   flex-direction: column;
@@ -503,6 +518,15 @@ header .header .lang-switcher {
   justify-content: space-between;
   gap: 16px;
   height: 100%;
+}
+@media (max-width: 767px) {
+  .banner__content {
+    padding-top: 60vw;
+    gap: 12px;
+  }
+  .banner__content img {
+    width: 95px;
+  }
 }
 .banner__content * {
   z-index: 1;
@@ -513,7 +537,7 @@ header .header .lang-switcher {
 }
 .banner__label {
   display: flex;
-  padding: 4px 16px;
+  padding: 8px 16px;
   align-items: center;
   align-self: stretch;
   border-radius: 33554400px;
@@ -531,13 +555,18 @@ header .header .lang-switcher {
   font-size: 72px;
   font-style: italic;
   font-weight: 700;
-  line-height: 90px;
+  line-height: 1.3;
   text-transform: uppercase;
   background: linear-gradient(90deg, #FFF 0%, #4CA1FF 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   max-width: 500px;
+}
+@media (max-width: 767px) {
+  .banner__title {
+    font-size: 38px;
+  }
 }
 .banner__text {
   color: #FFF;
@@ -548,10 +577,16 @@ header .header .lang-switcher {
   line-height: normal;
   max-width: 500px;
 }
+@media (max-width: 767px) {
+  .banner__text {
+    font-size: 16px;
+  }
+}
 .banner__controls {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  width: 100%;
 }
 .banner__btn {
   display: flex;
@@ -572,6 +607,11 @@ header .header .lang-switcher {
   text-transform: uppercase;
   transition: all 0.3s ease;
 }
+@media (max-width: 767px) {
+  .banner__btn {
+    width: 100%;
+  }
+}
 .banner__btn:hover {
   transform: scale(1.02);
 }
@@ -587,6 +627,11 @@ header .header .lang-switcher {
   display: flex;
   gap: 16px;
   width: 100%;
+}
+@media (max-width: 767px) {
+  .banner__infographics {
+    display: none;
+  }
 }
 .banner__infographics-item {
   display: flex;
@@ -619,17 +664,43 @@ header .header .lang-switcher {
   right: 0;
   z-index: 0;
   max-width: 70vw;
+  min-width: 60vw;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+@media (max-width: 767px) {
+  .banner__image {
+    max-width: 100vw;
+    min-width: 100vw;
+    top: 0;
+    bottom: auto;
+  }
+}
+.banner__image img {
+  max-height: 80vh;
 }
 
 .cafe {
   background: #F1F0EF;
   padding: 80px 0 0;
 }
+@media (max-width: 767px) {
+  .cafe {
+    padding: 20px 0 0;
+  }
+}
 .cafe__content {
   display: flex;
   flex-direction: column;
   gap: 48px;
   margin-bottom: 80px;
+}
+@media (max-width: 767px) {
+  .cafe__content {
+    gap: 20px;
+    margin-bottom: 20px;
+  }
 }
 .cafe__banner {
   display: flex;
@@ -640,14 +711,25 @@ header .header .lang-switcher {
   background: url(images/cafe-banner.webp) left center no-repeat;
   background-size: cover;
 }
+@media (max-width: 767px) {
+  .cafe__banner {
+    padding: 20px;
+    gap: 30px;
+  }
+}
 .cafe__banner-title {
   color: #FFF;
   font-family: "IBM Plex Serif";
   font-size: 36px;
   font-style: normal;
   font-weight: 700;
-  line-height: 45px;
+  line-height: 1.3;
   max-width: 620px;
+}
+@media (max-width: 767px) {
+  .cafe__banner-title {
+    font-size: 24px;
+  }
 }
 .cafe__banner-text {
   color: #E7E5E4;
@@ -655,7 +737,12 @@ header .header .lang-switcher {
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  line-height: 26px;
+  line-height: 1.6;
+}
+@media (max-width: 767px) {
+  .cafe__banner-text {
+    font-size: 16px;
+  }
 }
 .cafe__banner-btn {
   border-radius: 33554400px;
@@ -663,11 +750,23 @@ header .header .lang-switcher {
   box-shadow: 0 10px 15px -3px rgba(126, 42, 12, 0.3), 0 4px 6px -4px rgba(126, 42, 12, 0.3);
   color: #FFF;
 }
+@media (max-width: 767px) {
+  .cafe__banner-btn {
+    width: 100%;
+  }
+}
 .cafe__title {
   display: flex;
   align-items: center;
   gap: 32px;
   align-self: stretch;
+}
+@media (max-width: 767px) {
+  .cafe__title {
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+  }
 }
 .cafe__title h2 {
   color: #292524;
@@ -675,7 +774,12 @@ header .header .lang-switcher {
   font-size: 36px;
   font-style: normal;
   font-weight: 700;
-  line-height: 45px;
+  line-height: 1.3;
+}
+@media (max-width: 767px) {
+  .cafe__title h2 {
+    font-size: 24px;
+  }
 }
 .cafe__title span {
   color: #79716B;
@@ -692,20 +796,46 @@ header .header .lang-switcher {
   grid-column-gap: 8px;
   grid-row-gap: 8px;
 }
+@media (max-width: 767px) {
+  .cafe__list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+}
 .cafe__item--1 {
-  grid-area: 1/1/4/4;
+  grid-area: 1/1/3/3;
 }
 .cafe__item--2 {
   grid-area: 1/3/2/4;
 }
+@media (max-width: 767px) {
+  .cafe__item--2 {
+    grid-area: 3/1/4/2;
+  }
+}
 .cafe__item--3 {
   grid-area: 1/4/2/4;
+}
+@media (max-width: 767px) {
+  .cafe__item--3 {
+    grid-area: 3/2/4/3;
+  }
 }
 .cafe__item--4 {
   grid-area: 2/3/3/3;
 }
+@media (max-width: 767px) {
+  .cafe__item--4 {
+    grid-area: 4/1/5/2;
+  }
+}
 .cafe__item--5 {
   grid-area: 2/4/3/4;
+}
+@media (max-width: 767px) {
+  .cafe__item--5 {
+    grid-area: 4/2/5/3;
+  }
 }
 
 footer {
@@ -769,6 +899,12 @@ footer .footer__text {
   opacity: 1;
   transform: translateX(0);
   transition: 0.6s ease 0.15s;
+}
+
+.banner.is-loaded .banner__text {
+  opacity: 1;
+  transform: translateX(0);
+  transition: 0.6s ease;
 }
 
 /* кнопки */
@@ -855,6 +991,12 @@ footer .footer__text {
   font-weight: 500;
   line-height: 36px;
   letter-spacing: -0.75px;
+  text-transform: uppercase;
+}
+@media (max-width: 767px) {
+  .popup__title {
+    text-transform: none;
+  }
 }
 .popup__label {
   display: flex;
@@ -872,6 +1014,11 @@ footer .footer__text {
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+}
+@media (max-width: 767px) {
+  .popup__label {
+    font-size: 18px;
+  }
 }
 .popup__text {
   color: #FFF;
